@@ -2,6 +2,7 @@ package com.triningmug.foodiecilapp.repository;
 
 import com.triningmug.foodiecilapp.model.Customer;
 import com.triningmug.foodiecilapp.util.CsvReader;
+import com.triningmug.foodiecilapp.util.Factory;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,9 +10,13 @@ import java.util.Optional;
 public class CustomerRepository {
     private List<Customer> customerList;
     public CustomerRepository(){
-        CsvReader csvReader = new CsvReader();
+       /* CsvReader csvReader = new CsvReader();
         this.customerList = csvReader.readCustomersFromCsv();
+        */
+        this.customerList = Factory.getCsvReader().readCustomersFromCsv();
     }
+        */
+        */
     public List<Customer> getAllCustomers(){
         return this.customerList;
     }
